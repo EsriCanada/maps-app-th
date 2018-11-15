@@ -101,7 +101,7 @@ class UserNav extends declared(Widget) {
             userName: this.userName,
             sessionDuration: this.sessionDuration,
             menuItems: [
-              <a href="#" class={CSS.link} role="menu-item">
+              <a href="#" class={CSS.link} role="menuitem">
                 <div bind={this} afterCreate={this.handleAuthButton} />
               </a>
             ]
