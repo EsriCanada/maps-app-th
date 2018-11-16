@@ -99,7 +99,7 @@ module.exports = function(_, arg) {
             }),
 
             new HtmlWebPackPlugin({
-                title: "ArcGIS Maps App",
+                title: "WCAG Basic Viewer",
                 template: "./src/index.ejs",
                 filename: "./index.html",
                 favicon: "./src/assets/favicon.png",
