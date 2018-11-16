@@ -16,7 +16,7 @@
  * This is needed to be able to use premium
  * services such as routing and directions.
  */
-export const appId = "<APP-ID>";
+export const appId = "b54efa235b7f455f91b14396090ad3e3";
 
 /**
  * Users Portal URL.
@@ -40,6 +40,6 @@ export const viewOptions = {
 export const webMapItem = {
   portalItem: {
     // shared WebMap
-    id: "3ff64504498c4e9581a7a754412b6a9e"
+    id: "326320c9eab3489d8d17bc389ce1e023"
   }
 };
