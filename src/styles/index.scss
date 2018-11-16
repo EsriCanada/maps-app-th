@@ -1,61 +1,130 @@
 $theme: #767676;
-
 html,
 body {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  letter-spacing: 0em;
-  font-family: "Avenir Next", "Helvetica Neue", sans-serif;
-  font-size: 14px;
-  font-feature-settings: "liga" 1, "calt" 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 0em;
+    font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-feature-settings: "liga" 1, "calt" 0;
 }
 
+
 /* header */
+
 header.top-nav {
-  z-index: 1;
-  background-color: $theme;
+    z-index: 1;
+    background-color: $theme;
 }
 
 @media (max-width: 600px) {
-  .toolbar-title {
-    display: none;
-  }
+    .toolbar-title {
+        display: none;
+    }
 }
 
 .top-nav-title,
 .top-nav-link {
-  color: $white;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+    color: $white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
+
 /* map view */
+
 .main,
 webmap {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .esri-view-root {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
+
 /* Fix for some calcite styles */
+
 .esri-widget {
-  h3 {
-    font-size: 1rem;
-  }
-  li {
-    margin: 0;
-  }
+    h3 {
+        font-size: 1rem;
+    }
+    li {
+        margin: 0;
+    }
+}
+
+.loading-indicator {
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 500;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: #fff;
+}
+
+#splashScreen {
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 501;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: #fff;
+    opacity: 0.9;
+}
+
+#splashScreenContent {
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-height: 100%;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.app-loading .loading-indicator {
+    width: 800px;
+    height: 800px;
+    background-position: center center;
+    background-image: url(../images/reload3.gif);
+    background-repeat: no-repeat;
+}
+
+.app-loading .loading-indicator,
+.app-error .loading-indicator {
+    display: block;
+}
+
+.app-error .loading-message {
+    background-position: top center;
+    background-image: url(../images/error.png);
+    background-repeat: no-repeat;
+    padding-top: 60px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 75%;
+    left: 0;
+    text-align: center;
 }
